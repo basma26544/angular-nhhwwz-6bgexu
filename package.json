@@ -27,6 +27,7 @@
     "apexcharts": "^3.35.5",
     "bootstrap": "^5.2.1",
     "bootstrap-icons": "^1.9.1",
+    "chart.js": "^3.9.1",
     "cli": "^1.0.1",
     "jquery": "^3.6.1",
     "popper.js": "^1.16.1",

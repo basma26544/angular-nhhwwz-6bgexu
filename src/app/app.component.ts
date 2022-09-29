@@ -7,7 +7,7 @@ import { interval, map, takeWhile } from 'rxjs';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  count = 60;
+  count = 20;
 
   timeout = setInterval(() => {
     if (this.count <= 60) {

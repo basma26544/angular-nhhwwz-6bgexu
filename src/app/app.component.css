@@ -30,3 +30,13 @@
      opacity: 0;
    }
  }
+
+ dd {
+   position:relative;
+   font-size:x-small;
+
+ }
+
+ dt{
+   position:relative;
+ }

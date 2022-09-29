@@ -10,11 +10,10 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
     
-    today= new Date();
-    todaysDataTime = '';
-    
-    ngOnInit(){
-    
-      this.todaysDataTime = formatDate(this.today, 'hh:mm:ss ', 'en-US');
-    }
+  today= new Date();
+  jstoday = '';
+  constructor() {
+    this.jstoday = formatDate(this.today, ' hh:mm:ss ', 'en-US');
+  }
+  
 }

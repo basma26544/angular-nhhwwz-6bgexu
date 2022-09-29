@@ -12,8 +12,9 @@ export class AppComponent {
     
     today= new Date();
     todaysDataTime = '';
-  
-    constructor() {
-      this.todaysDataTime = formatDate(this.today, 'hh:mm:ss ', 'en-US','+0430');
+    
+    ngOnInit(){
+    
+      this.todaysDataTime = formatDate(this.today, 'hh:mm:ss ', 'en-US');
     }
 }

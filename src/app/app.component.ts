@@ -9,11 +9,11 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  
+    
     today= new Date();
     todaysDataTime = '';
   
     constructor() {
-      this.todaysDataTime = formatDate(this.today, ' hh:mm:ss ', 'en-US', '+0530');
+      this.todaysDataTime = formatDate(this.today, 'hh:mm:ss ', 'en-US','+0430');
     }
 }

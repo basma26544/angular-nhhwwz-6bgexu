@@ -1,5 +1,7 @@
+import { formatDate } from '@angular/common';
 import { Component } from '@angular/core';
-import { interval, map, takeWhile } from 'rxjs';
+
+
 
 @Component({
   selector: 'app-root',
@@ -7,30 +9,11 @@ import { interval, map, takeWhile } from 'rxjs';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  count = 20;
-
-  timeout = setInterval(() => {
-    if (this.count <= 60) {
-      this.count += 1;
-    } else {
-      clearInterval(this.timeout);
+  
+    today= new Date();
+    todaysDataTime = '';
+  
+    constructor() {
+      this.todaysDataTime = formatDate(this.today, ' hh:mm:ss ', 'en-US', '+0530');
     }
-  }, 500);
-
-  // RxJs way
-  // The interval Observable will emit increasing values and we want to display decreasing ones, we will log the difference between the total length of our countdown and the value emitted:
-
-  private maxValue = 10;
-
-  countDown$ = interval(500).pipe(
-    map(value => this.maxValue - value),
-    takeWhile(x => x >= 0)
-  );
 }
-
-
-/*
-Copyright Google LLC. All Rights Reserved.
-Use of this source code is governed by an MIT-style license that
-can be found in the LICENSE file at https://angular.io/license
-*/
